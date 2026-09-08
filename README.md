@@ -25,7 +25,7 @@ A story-driven, interactive portfolio chronicling the career journey of **Haruss
 
 | Project / System | Focus Area | Scope & Impact |
 | :--- | :--- | :--- |
-| **[SuamiSihat Telehealth App](https://assets.suamisihat.myds.me/)** | Product Design Lead | Structured core UX, wireframes, UI mockups, and the winning pitch deck securing an **RM100,000 MDEC CIP SPARK Grant**. |
+| **[SuamiSihat Telehealth App](https://www.suamisihat.app/)** | Product Design Lead | Structured core UX, wireframes, UI mockups, and the winning pitch deck securing an **RM100,000 MDEC CIP SPARK Grant**. Live at [suamisihat.app](https://www.suamisihat.app/). |
 | **[JomParking®](https://web.jomparking.com/) & [GoPayy+](https://govicle.com/gopayy/)** | Creative Direction | Directed enterprise brand design across 5 IoT product lines; recognized with the **Best IoT Startup Malaysia Award** at Rice Bowl Startup Awards (ASEAN Finalist). |
 | **[Appcable](https://appcable.com/)** | Brand Systems Architect | Corporate visual identity system, Swiss-grid stationery, executive collateral suite, and brand guidelines. |
 | **[SS-CAM (SuamiSihat Creative Asset Management)](https://github.com/SuamiSihat/ss_cam)** | Systems Creator | Windows creative workstation deployment utility standardizing fonts, color palettes, folder hierarchy, and Job ID tracking. |

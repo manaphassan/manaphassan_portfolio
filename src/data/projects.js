@@ -83,8 +83,9 @@ export const projects = [
       "mywork/02-commercial-print-posm/displays-frames/acrylic-frame-display.jpg"
     ],
     links: [
-      { label: "Ecosystem Hub", url: "https://suamisihat.com.my" },
-      { label: "Design System", url: "https://assets.suamisihat.myds.me/" }
+      { label: "SuamiSihat App (suamisihat.app)", url: "https://www.suamisihat.app/" },
+      { label: "Design System (SSOT)", url: "https://assets.suamisihat.myds.me/" },
+      { label: "Ecosystem Hub", url: "https://suamisihat.com.my" }
     ]
   },
   {

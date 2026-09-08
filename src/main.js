@@ -549,6 +549,7 @@ function initCommandPalette() {
 
   const commands = [
     { title: "Download Executive CV (PDF)", cat: "Dossier", action: () => openResume() },
+    { title: "SuamiSihat Telehealth App (suamisihat.app)", cat: "Live Platform", action: () => window.open('https://www.suamisihat.app/', '_blank') },
     { title: "JomParking® Platform (web.jomparking.com)", cat: "Live Platform", action: () => window.open('https://web.jomparking.com/', '_blank') },
     { title: "GoPayy+ Digital Payment (govicle.com/gopayy)", cat: "Live Platform", action: () => window.open('https://govicle.com/gopayy/', '_blank') },
     { title: "SuamiSihat™ Design System (Single Source of Truth)", cat: "Live System", action: () => window.open('https://assets.suamisihat.myds.me/', '_blank') },
