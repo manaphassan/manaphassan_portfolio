@@ -22,7 +22,9 @@ import {
   Terminal, 
   Globe, 
   Linkedin, 
-  Palette 
+  Palette,
+  Contact,
+  Download
 } from 'lucide';
 import confetti from 'canvas-confetti';
 import { careerEras, executiveMetrics } from './data/career.js';
@@ -34,7 +36,7 @@ const icons = {
   Search, FileText, ArrowDownRight, Play, Github, Youtube,
   ExternalLink, Printer, X, Check, Copy, Award, Layers,
   Briefcase, Cpu, Code, Clock, ShieldCheck, Handshake, Terminal,
-  Globe, Linkedin, Palette
+  Globe, Linkedin, Palette, Contact, Download
 };
 
 function refreshIcons() {
@@ -644,38 +646,99 @@ function initResumeAndContact() {
   const lbDialog = document.getElementById('lightbox-dialog');
   lbClose?.addEventListener('click', () => lbDialog?.close());
 
-  // Copy contact dossier
-  const copyBtn = document.getElementById('btn-copy-dossier');
-  const copyLabel = document.getElementById('copy-dossier-label');
+  // Save vCard (.vcf)
+  const saveVCardBtn = document.getElementById('btn-save-vcard');
+  const saveVCardLabel = document.getElementById('save-vcard-label');
 
-  copyBtn?.addEventListener('click', async () => {
-    const dossierText = `HARUSSANI MANAPHASSAN
-Head of Creatives · Product Design Lead · Brand Systems Architect
-Location: Banting & Shah Alam, Selangor, Malaysia
-Portfolio: https://manaphassan.github.io/manaphassan_portfolio/
-LinkedIn: https://www.linkedin.com/in/manaphassan
-Behance: https://www.behance.net/manaphassan
-GitHub: https://github.com/manaphassan
-YouTube: https://www.youtube.com/@harussani.manaphassan
-Borneo Showreel: https://www.youtube.com/watch?v=xmuCcunYNGU&list=PL1BCB093F66106553`;
+  saveVCardBtn?.addEventListener('click', () => {
+    const vcardContent = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      'FN:Harussani Manaphassan',
+      'N:Manaphassan;Harussani;;;',
+      'TITLE:Head of Creatives · Product Design Lead · Brand Systems Architect',
+      'ORG:SuamiSihat · Appcable',
+      'EMAIL;TYPE=INTERNET;TYPE=WORK:harussani.manaphassan@gmail.com',
+      'URL:https://manaphassan.github.io/manaphassan_portfolio/',
+      'URL;TYPE=LinkedIn:https://www.linkedin.com/in/manaphassan',
+      'URL;TYPE=Behance:https://www.behance.net/manaphassan',
+      'URL;TYPE=GitHub:https://github.com/manaphassan',
+      'ADR;TYPE=WORK:;;Banting • Cyberjaya • Shah Alam;Selangor;;;Malaysia',
+      'NOTE:19-Year Career Growth Portfolio. Brand Architecture, Product UI/UX, Pre-Press Print, and Creative Leadership.',
+      'END:VCARD'
+    ].join('\r\n');
 
-    try {
-      await navigator.clipboard.writeText(dossierText);
-      confetti({
-        particleCount: 50,
-        spread: 60,
-        origin: { y: 0.8 },
-        colors: ['#09090B', '#1D4ED8', '#047857']
-      });
+    const blob = new Blob([vcardContent], { type: 'text/vcard;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'Harussani_Manaphassan.vcf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
 
-      if (copyLabel) {
-        copyLabel.textContent = "Dossier Copied!";
-        setTimeout(() => copyLabel.textContent = "Copy Contact Dossier", 2500);
-      }
-    } catch (e) {
-      alert(dossierText);
+    confetti({
+      particleCount: 60,
+      spread: 70,
+      origin: { y: 0.8 },
+      colors: ['#0F172A', '#2563EB', '#10B981']
+    });
+
+    if (saveVCardLabel) {
+      saveVCardLabel.textContent = "vCard Saved!";
+      setTimeout(() => {
+        saveVCardLabel.textContent = "Save vCard (.vcf)";
+      }, 2500);
     }
   });
+}
+
+/* ==========================================================================
+   10. ANIMATED SCROLL PROGRESS & TIMELINE SPINE SYSTEM
+   ========================================================================== */
+function initScrollProgressAndTimelineSpine() {
+  const progressBar = document.getElementById('scroll-progress-bar');
+  const spineTrack = document.getElementById('timeline-spine-track');
+  const spineProgress = document.getElementById('timeline-spine-progress');
+  const chronicleContainer = document.getElementById('story-chronicle-container');
+  const nodes = document.querySelectorAll('.timeline-node');
+
+  function updateProgress() {
+    // 1. Global top reading bar
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    if (progressBar && maxScroll > 0) {
+      const globalPercent = Math.min(100, Math.max(0, (scrollY / maxScroll) * 100));
+      progressBar.style.width = `${globalPercent}%`;
+    }
+
+    // 2. Continuous timeline spine in chronicle
+    if (chronicleContainer && spineProgress && spineTrack) {
+      const containerRect = chronicleContainer.getBoundingClientRect();
+      const trackHeight = spineTrack.offsetHeight;
+      const windowCenter = window.innerHeight * 0.4;
+
+      const scrolledIntoContainer = windowCenter - containerRect.top;
+      let spinePercent = (scrolledIntoContainer / containerRect.height) * 100;
+      spinePercent = Math.min(100, Math.max(0, spinePercent));
+      spineProgress.style.height = `${(spinePercent / 100) * trackHeight}px`;
+
+      // 3. Highlight timeline nodes as reader passes each act
+      nodes.forEach(node => {
+        const nodeRect = node.getBoundingClientRect();
+        if (nodeRect.top <= window.innerHeight * 0.45) {
+          node.classList.add('is-active');
+        } else {
+          node.classList.remove('is-active');
+        }
+      });
+    }
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress, { passive: true });
+  updateProgress();
 }
 
 /* ==========================================================================
@@ -689,6 +752,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderCredentialsAndSkills();
   fetchGitHubRepos();
   initScrollObserver();
+  initScrollProgressAndTimelineSpine();
   initCommandPalette();
   initResumeAndContact();
   refreshIcons();

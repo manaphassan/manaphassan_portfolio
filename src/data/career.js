@@ -6,7 +6,7 @@ export const careerEras = [
     actTitle: "Creative Leadership & Product Direction",
     role: "Head of Creatives · Product Design Lead · Brand Systems Architect",
     organization: "Suamisihat Holding · Suamisihat Tech · Appcable",
-    location: "Banting & Shah Alam, Selangor",
+    location: "Banting • Cyberjaya • Shah Alam, MY",
     badge: "Product Lead & MDEC Grant Pitch",
     badgeColor: "amber",
     lens: ["creative", "tech"],

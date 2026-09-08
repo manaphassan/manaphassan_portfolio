@@ -22,6 +22,11 @@
 </head>
 <body class="bg-white text-paper-900 min-h-screen text-base leading-relaxed">
 
+  <!-- GLOBAL SCROLL READING PROGRESS BAR (ANIMATED) -->
+  <div class="fixed top-0 left-0 right-0 h-[3px] bg-paper-150 z-50 pointer-events-none">
+    <div id="scroll-progress-bar" class="h-full bg-paper-950 w-0 transition-all duration-75"></div>
+  </div>
+
   <!-- TOP NAVIGATION (Full width, clean, spacious) -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-paper-200 transition-all">
     <div class="w-full px-4 sm:px-8 lg:px-12 xl:px-16 h-18 flex items-center justify-between">
@@ -91,10 +96,11 @@
         <div class="font-mono text-sm sm:text-base text-paper-700 flex flex-wrap gap-x-3 gap-y-1 font-semibold">
           <span>Head of Creatives</span>
           <span class="text-paper-400">/</span>
-          <span>Chief Brand Officer</span>
+          <span>Product Design Lead</span>
           <span class="text-paper-400">/</span>
           <span>Brand Systems Architect</span>
         </div>
+        <p class="font-mono text-xs text-paper-500 font-semibold">Banting &bull; Cyberjaya &bull; Shah Alam, MY</p>
       </div>
 
       <!-- Narrative Thesis -->
@@ -186,12 +192,14 @@
     <!-- THE 5-ACT STORY CHRONICLE (VERTICAL NARRATIVE SPINE) -->
     <div class="relative pt-12 space-y-24" id="story-chronicle-container">
       
-      <!-- Continuous Timeline Spine -->
-      <div class="hidden sm:block absolute top-16 bottom-16 left-6 w-[2px] bg-paper-200 -z-10"></div>
+      <!-- Continuous Timeline Spine (Animated Progress) -->
+      <div class="hidden sm:block absolute top-16 bottom-16 left-6 w-[2px] bg-paper-200 -z-10 rounded-full overflow-hidden" id="timeline-spine-track">
+        <div class="w-[2px] bg-paper-950 h-0" id="timeline-spine-progress"></div>
+      </div>
 
       <!-- ACT 01: CRAFT & INDUSTRIAL PRESS PRODUCTION RIGOR (2007–2009) -->
       <section id="act-01" class="story-chapter sm:pl-16 relative">
-        <div class="hidden sm:flex absolute -left-[5px] top-2 w-6 h-6 rounded-full bg-white border-2 border-paper-950 items-center justify-center font-mono text-xs font-bold">
+        <div class="timeline-node hidden sm:flex absolute -left-[5px] top-2 w-6 h-6 rounded-full bg-white border-2 border-paper-300 text-paper-700 items-center justify-center font-mono text-xs font-bold transition-all duration-300 shadow-2xs" data-act-marker="1">
           1
         </div>
 
@@ -234,7 +242,7 @@
 
       <!-- ACT 02: HIGH-STAKES BROADCAST & GOVERNMENT MEDIA (2009–2012) -->
       <section id="act-02" class="story-chapter sm:pl-16 relative">
-        <div class="hidden sm:flex absolute -left-[5px] top-2 w-6 h-6 rounded-full bg-white border-2 border-paper-950 items-center justify-center font-mono text-xs font-bold">
+        <div class="timeline-node hidden sm:flex absolute -left-[5px] top-2 w-6 h-6 rounded-full bg-white border-2 border-paper-300 text-paper-700 items-center justify-center font-mono text-xs font-bold transition-all duration-300 shadow-2xs" data-act-marker="2">
           2
         </div>
 
@@ -301,7 +309,7 @@
 
       <!-- ACT 03: THE 6-ENTITY SOLO OPERATOR & 14-YEAR TRUST (2012–2018) -->
       <section id="act-03" class="story-chapter sm:pl-16 relative">
-        <div class="hidden sm:flex absolute -left-[5px] top-2 w-6 h-6 rounded-full bg-white border-2 border-paper-950 items-center justify-center font-mono text-xs font-bold">
+        <div class="timeline-node hidden sm:flex absolute -left-[5px] top-2 w-6 h-6 rounded-full bg-white border-2 border-paper-300 text-paper-700 items-center justify-center font-mono text-xs font-bold transition-all duration-300 shadow-2xs" data-act-marker="3">
           3
         </div>
 
@@ -344,7 +352,7 @@
 
       <!-- ACT 04: NATIONAL SMART CITY PLATFORM & REBRAND (2018–2024) -->
       <section id="act-04" class="story-chapter sm:pl-16 relative">
-        <div class="hidden sm:flex absolute -left-[5px] top-2 w-6 h-6 rounded-full bg-white border-2 border-paper-950 items-center justify-center font-mono text-xs font-bold">
+        <div class="timeline-node hidden sm:flex absolute -left-[5px] top-2 w-6 h-6 rounded-full bg-white border-2 border-paper-300 text-paper-700 items-center justify-center font-mono text-xs font-bold transition-all duration-300 shadow-2xs" data-act-marker="4">
           4
         </div>
 
@@ -387,7 +395,7 @@
 
       <!-- ACT 05: CREATIVE LEADERSHIP & PRODUCT DIRECTION (2024–PRESENT) -->
       <section id="act-05" class="story-chapter sm:pl-16 relative">
-        <div class="hidden sm:flex absolute -left-[5px] top-2 w-6 h-6 rounded-full bg-paper-950 text-white flex items-center justify-center font-mono text-xs font-bold shadow-md">
+        <div class="timeline-node hidden sm:flex absolute -left-[5px] top-2 w-6 h-6 rounded-full bg-white border-2 border-paper-300 text-paper-700 items-center justify-center font-mono text-xs font-bold transition-all duration-300 shadow-2xs" data-act-marker="5">
           5
         </div>
 
@@ -513,9 +521,9 @@
             <i data-lucide="file-text" class="w-4 h-4"></i>
             <span>Download Executive CV (PDF)</span>
           </button>
-          <button id="btn-copy-dossier" class="px-6 py-3.5 rounded-xl border border-paper-300 bg-white text-paper-900 font-mono text-xs uppercase tracking-wider font-bold hover:bg-paper-100 transition-all flex items-center gap-2">
-            <i data-lucide="copy" class="w-4 h-4 text-paper-600"></i>
-            <span id="copy-dossier-label">Copy Contact Dossier</span>
+          <button id="btn-save-vcard" class="px-6 py-3.5 rounded-xl border border-paper-300 bg-white text-paper-900 font-mono text-xs uppercase tracking-wider font-bold hover:bg-paper-100 transition-all flex items-center gap-2 shadow-2xs">
+            <i data-lucide="contact" class="w-4 h-4 text-accent-blue"></i>
+            <span id="save-vcard-label">Save vCard (.vcf)</span>
           </button>
         </div>
 
@@ -537,29 +545,26 @@
             YouTube
           </a>
           <span>&middot;</span>
-          <span>Banting &middot; Shah Alam, MY</span>
+          <span class="font-semibold text-paper-800">Banting &bull; Cyberjaya &bull; Shah Alam, MY</span>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- MINIMAL FOOTER -->
-  <footer class="border-t border-paper-200 bg-white py-8 font-mono text-xs text-paper-600">
-    <div class="w-full px-4 sm:px-8 lg:px-12 xl:px-16 flex flex-col sm:flex-row items-center justify-between gap-4">
+  <!-- MINIMAL FOOTER (NO LINKS) -->
+  <footer class="border-t border-paper-200 bg-white py-10 font-mono text-xs text-paper-500">
+    <div class="w-full px-4 sm:px-8 lg:px-12 xl:px-16 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
       <div>
         <span class="font-bold text-paper-950">Harussani Manaphassan</span>
-        <span>&middot;</span>
-        <span>19-Year Career Growth Chronicle</span>
+        <span class="mx-2 text-paper-300">&middot;</span>
+        <span>Head of Creatives &amp; Product Design Lead</span>
       </div>
-      <div class="flex items-center gap-4">
-        <a href="https://www.linkedin.com/in/manaphassan" target="_blank" rel="noreferrer" class="hover:text-paper-950 transition-colors">LinkedIn</a>
-        <a href="https://www.behance.net/manaphassan" target="_blank" rel="noreferrer" class="hover:text-paper-950 transition-colors">Behance</a>
-        <a href="https://github.com/manaphassan" target="_blank" rel="noreferrer" class="hover:text-paper-950 transition-colors">GitHub</a>
-        <a href="https://www.youtube.com/@harussani.manaphassan" target="_blank" rel="noreferrer" class="hover:text-paper-950 transition-colors">YouTube</a>
+      <div class="text-paper-700 font-semibold">
+        Banting &bull; Cyberjaya &bull; Shah Alam, MY
       </div>
-      <div>
-        Kothar-wa-Khasis &middot; M.E.E.N.A.
+      <div class="text-paper-400">
+        &copy; 2007 &ndash; 2026
       </div>
     </div>
   </footer>
@@ -625,7 +630,7 @@
           <div>
             <h1 class="font-bold text-2xl text-paper-950">Harussani Manaphassan</h1>
             <p class="font-mono text-xs text-paper-700 font-semibold">Head of Creatives &middot; Product Design Lead &middot; Brand Systems Architect</p>
-            <p class="text-xs text-paper-600 font-sans">Banting &amp; Shah Alam, Selangor, Malaysia</p>
+            <p class="text-xs text-paper-600 font-sans">Banting &bull; Cyberjaya &bull; Shah Alam, MY</p>
           </div>
           <div class="font-mono text-right text-xs text-paper-600 font-medium">
             <p>19 Years Professional Practice</p>

@@ -35,7 +35,7 @@
 }
 
 /* ==========================================================================
-   ANIMATED CSS MOTION SYSTEM
+   ANIMATED CSS MOTION & TIMELINE PROGRESS SYSTEM
    ========================================================================== */
 
 @keyframes fadeInUp {
@@ -60,6 +60,27 @@
   }
 }
 
+#scroll-progress-bar {
+  will-change: width;
+}
+
+#timeline-spine-progress {
+  will-change: height;
+  transition: height 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-node {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-node.is-active {
+  background-color: #0F172A !important;
+  color: #FFFFFF !important;
+  border-color: #0F172A !important;
+  transform: scale(1.22);
+  box-shadow: 0 0 0 5px rgba(15, 23, 42, 0.12), 0 6px 16px rgba(15, 23, 42, 0.16);
+}
+
 .story-chapter {
   opacity: 0;
   transform: translateY(24px);
@@ -79,6 +100,27 @@
 .story-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 30px -10px rgba(15, 23, 42, 0.08);
+}
+
+/* Staggered card reveal on act activation */
+.story-chapter.is-revealed .story-card {
+  animation: cardReveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.story-chapter.is-revealed .story-card:nth-child(1) { animation-delay: 0.06s; }
+.story-chapter.is-revealed .story-card:nth-child(2) { animation-delay: 0.14s; }
+.story-chapter.is-revealed .story-card:nth-child(3) { animation-delay: 0.22s; }
+.story-chapter.is-revealed .story-card:nth-child(4) { animation-delay: 0.30s; }
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .act-marker-pulse {
@@ -112,7 +154,7 @@ dialog::backdrop {
     color: #0F172A !important;
     font-size: 12pt !important;
   }
-  header, footer, nav, #story-nav-strip, #btn-cmd-palette, #btn-open-resume {
+  header, footer, nav, #story-nav-strip, #btn-cmd-palette, #btn-open-resume, #scroll-progress-bar {
     display: none !important;
   }
   #resume-dialog {
