@@ -33,7 +33,7 @@ export const skillDomains = [
     skills: [
       { name: "Google Veo AI Video Generation Pipeline", level: 95 },
       { name: "Multi-Agent AI Architecture (NOVA, ARIA, FINA)", level: 90 },
-      { name: "N8N & NocoBase Orchestration", level: 88 },
+      { name: "Workflow Automation & NocoBase Ledgers", level: 88 },
       { name: "Edge Hardware / LCARS AI (Raspberry Pi)", level: 86 },
       { name: "Prompt Engineering & Content Automation", level: 94 }
     ]
@@ -45,7 +45,7 @@ export const skillDomains = [
     description: "Navigating corporate governance, government grant acquisition, long-term founder trust networks, and commercial print machining.",
     skills: [
       { name: "Grant Writing & Pitch (MDEC CIP SPARK)", level: 92 },
-      { name: "Statutory Directorship & SSM Governance", level: 90 },
+      { name: "Multi-Entity Creative Governance", level: 94 },
       { name: "Cross-Entity Operational Leadership", level: 94 },
       { name: "Commercial & Large-Format Machining", level: 96 },
       { name: "Broadcast TV & Documentary Production", level: 88 }
@@ -63,12 +63,12 @@ export const verifiedCredentials = [
     icon: "award"
   },
   {
-    title: "Statutory Directorship (SSM)",
-    issuer: "Suruhanjaya Syarikat Malaysia (Companies Commission of Malaysia)",
-    value: "Registered Director",
-    year: "2025 – Present",
-    detail: "Suamisihat Technology Sdn Bhd (1569771-W) & Appcable Sdn Bhd.",
-    icon: "shield-check"
+    title: "Head of Creatives (9 Entities)",
+    issuer: "Suamisihat Holding Sdn. Bhd.",
+    value: "Executive Appointment",
+    year: "2024 – Present",
+    detail: "Governing unified brand architecture across holding group subsidiaries.",
+    icon: "layers"
   },
   {
     title: "Best IoT Startup (Malaysia)",

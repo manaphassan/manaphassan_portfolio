@@ -3,24 +3,24 @@ export const careerEras = [
     act: 5,
     actNumber: "05",
     era: "2024 – Present",
-    actTitle: "Executive Directorship & Autonomous AI Scale",
-    role: "Head of Creatives · Statutory Director · Chief Brand Officer",
+    actTitle: "Creative Leadership & Autonomous AI Scale",
+    role: "Head of Creatives · Chief Brand Officer · Brand Systems Architect",
     organization: "Suamisihat Holding · Suamisihat Tech · Appcable",
     location: "Banting & Shah Alam, Selangor",
-    badge: "Director & RM100K Grant",
+    badge: "Creative Lead & RM100K Grant",
     badgeColor: "amber",
     lens: ["executive", "creative", "tech"],
-    storyThesis: "Entering as Senior Designer, I originated the mobile app internally. This work resulted in the incorporation of a dedicated tech subsidiary (SST), securing a six-figure government grant (MDEC CIP SPARK), and receiving a statutory directorship. Simultaneously appointed Head of Creatives across 9 holding entities, I engineered an automated commercial AI video pipeline with Google Veo producing ≥10 assets daily, and co-architected Appcable's 5-Agent Autonomous AI OS.",
+    storyThesis: "Entering as Senior Designer, I originated the mobile app internally. This work resulted in the incorporation of a dedicated tech subsidiary (SST) and securing a six-figure government grant (MDEC CIP SPARK). Simultaneously appointed Head of Creatives across 9 holding entities, I engineered an automated commercial AI video pipeline with Google Veo producing ≥10 assets daily, and co-architected Appcable's 5-Agent Autonomous AI OS.",
     highlights: [
       "Originated SuamiSihat mobile app & secured RM100,000 MDEC CIP SPARK Grant.",
-      "Appointed Statutory Director (SSM-registered) of Suamisihat Technology Sdn. Bhd.",
+      "Product Design Lead & Founding Contributor for Suamisihat Technology Sdn. Bhd.",
       "Formally contracted as Head of Creatives governing brand architecture across 9 holding entities.",
       "Built Google Veo commercial AI video production pipeline (Dr. MIT Ring S1: 13 episodes + 1 feature film).",
       "Concurrent Chief Brand Officer at Appcable architecting a 5-agent AI operating system (NOVA, ARIA, FINA, MIRA, AXEL)."
     ],
     proofBadges: [
       { label: "MDEC CIP SPARK Grant", value: "RM 100,000 Awarded", icon: "award" },
-      { label: "Statutory Directorship", value: "SSM Registered", icon: "shield-check" },
+      { label: "Subsidiary Origination", value: "SST Incorporated", icon: "shield-check" },
       { label: "Entities Governed", value: "9 Subsidiaries", icon: "layers" },
       { label: "AI Production Velocity", value: "≥10 Videos/Day", icon: "video" }
     ],
@@ -131,7 +131,7 @@ export const careerEras = [
 export const executiveMetrics = [
   { value: "19", label: "Years Practice", sub: "Print to Broadcast, IoT & AI", icon: "clock" },
   { value: "100K", label: "MYR MDEC Grant", sub: "CIP SPARK Awarded (SST)", icon: "award" },
-  { value: "02", label: "Directorships", sub: "SSM Registered (SST & Appcable)", icon: "shield-check" },
   { value: "09", label: "Entities Governed", sub: "Brand Architecture Governance", icon: "layers" },
+  { value: "05", label: "IoT & Product Lines", sub: "Smart Mobility & Digital POS", icon: "shield-check" },
   { value: "14+", label: "Years Trust", sub: "Continuous Founder Network", icon: "handshake" }
 ];

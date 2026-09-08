@@ -17,12 +17,12 @@ export const externalProfiles = {
 
 export const projects = [
   /* ==========================================================================
-     ACT 05: EXECUTIVE DIRECTORSHIP & AUTONOMOUS AI (2024–PRESENT)
+     ACT 05: CREATIVE LEADERSHIP & AUTONOMOUS AI (2024–PRESENT)
      ========================================================================== */
   {
     id: "suamisihat-design-system",
     act: 5,
-    actTitle: "Act 05: Directorship & AI Scale",
+    actTitle: "Act 05: Creative Leadership & AI Scale",
     title: "SuamiSihat™ Design System — Single Source of Truth",
     client: "Suamisihat Holding Sdn. Bhd.",
     category: "product-ux",
@@ -45,7 +45,7 @@ export const projects = [
   {
     id: "ss-cam-tool",
     act: 5,
-    actTitle: "Act 05: Directorship & AI Scale",
+    actTitle: "Act 05: Creative Leadership & AI Scale",
     title: "SuamiSihat / ss_cam — Creative Workstation Automation",
     client: "SuamiSihat Creative Operations",
     category: "ai-systems",
@@ -66,16 +66,16 @@ export const projects = [
   {
     id: "suamisihat-app",
     act: 5,
-    actTitle: "Act 05: Directorship & AI Scale",
+    actTitle: "Act 05: Creative Leadership & AI Scale",
     title: "SuamiSihat Mobile App & Tech Subsidiary",
     client: "Suamisihat Technology Sdn. Bhd.",
     category: "product-ux",
     lens: ["executive", "tech", "creative"],
     year: "2024 – Present",
-    badge: "RM100K MDEC Grant & SSM Director",
+    badge: "RM100K MDEC Grant & Product Lead",
     summary: "Originated the mobile application concept internally. Authored full UI/UX, user flows, subscription tiers, and the successful MDEC CIP SPARK grant application that founded SST as a dedicated tech subsidiary.",
-    deliverables: ["Mobile UI/UX Architecture", "Subscription Tier Design", "MDEC CIP SPARK Pitch", "SSM Statutory Directorship"],
-    impact: "Secured RM100,000 MDEC CIP SPARK grant and appointed Statutory Director upon company incorporation.",
+    deliverables: ["Mobile UI/UX Architecture", "Subscription Tier Design", "MDEC CIP SPARK Pitch", "Product Origination Specs"],
+    impact: "Originated internal app concept securing RM100,000 MDEC CIP SPARK grant and founding SST tech subsidiary.",
     image: "mywork/03-digital-product-ui/suamisihat-app/suamisihat-app-preview.jpg",
     gallery: [
       "mywork/03-digital-product-ui/suamisihat-app/suamisihat-app-preview.jpg",
@@ -89,7 +89,7 @@ export const projects = [
   {
     id: "ai-video-veo",
     act: 5,
-    actTitle: "Act 05: Directorship & AI Scale",
+    actTitle: "Act 05: Creative Leadership & AI Scale",
     title: "Google Veo AI Commercial Video Pipeline",
     client: "Suamisihat Ecommerce Sdn. Bhd.",
     category: "ai-systems",
@@ -108,15 +108,15 @@ export const projects = [
   {
     id: "appcable-ai-agents",
     act: 5,
-    actTitle: "Act 05: Directorship & AI Scale",
+    actTitle: "Act 05: Creative Leadership & AI Scale",
     title: "Appcable Autonomous Multi-Agent OS",
     client: "Appcable Sdn. Bhd.",
     category: "ai-systems",
     lens: ["tech", "executive"],
     year: "2026",
     badge: "5-Agent AI Architecture",
-    summary: "Architected a cohesive 5-agent AI operating system (NOVA, ARIA, FINA, MIRA, AXEL) orchestrated via N8N, NocoBase, Claude API, and Telegram for automated business operations and executive telemetry.",
-    deliverables: ["Agent OS Architecture Specs", "N8N Orchestration Workflows", "NocoBase Relational Ledgers", "Agent Dispatch Protocols"],
+    summary: "Architected a cohesive 5-agent AI operating system (NOVA, ARIA, FINA, MIRA, AXEL) orchestrated via automated webhook pipelines, NocoBase relational ledgers, Claude API, and Telegram for automated business operations and executive telemetry.",
+    deliverables: ["Agent OS Architecture Specs", "Autonomous Workflow Pipelines", "NocoBase Relational Ledgers", "Agent Dispatch Protocols"],
     impact: "Automated business telemetry, financial auditing, and multi-channel customer communications on private server infrastructure.",
     image: "mywork/03-digital-product-ui/appcable/appcable-logo-identity.jpg",
     gallery: [

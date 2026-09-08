@@ -270,7 +270,7 @@ const agentsData = [
     name: 'NOVA',
     role: 'Operations & Orchestration',
     mission: 'Asynchronous job dispatching, server health telemetry, and automated task scheduling across Appcable enterprise infrastructure.',
-    tech: 'N8N · Docker · DietPi · Webhooks',
+    tech: 'Automated Webhooks · Docker · DietPi · Telegram',
     trigger: 'Event Bus & Telemetry'
   },
   {
@@ -371,7 +371,7 @@ function renderCredentialsAndSkills() {
 
   if (credsContainer) {
     credsContainer.innerHTML = `
-      <span class="font-mono text-xs uppercase tracking-wider text-paper-500 font-bold block mb-2">[VERIFIED STATUTORY & INSTITUTIONAL FILINGS]</span>
+      <span class="font-mono text-xs uppercase tracking-wider text-paper-500 font-bold block mb-2">[VERIFIED CREDENTIALS & INSTITUTIONAL EVIDENCE]</span>
       <div class="space-y-3">
         ${verifiedCredentials.map(c => `
           <div class="p-4 rounded-xl border border-paper-200 bg-paper-50 flex items-start justify-between gap-3">
@@ -515,7 +515,7 @@ function initCommandPalette() {
     { title: "Jump to Act 02: Broadcast Media & KKM Award", cat: "Story", action: () => { window.location.hash = '#act-02'; } },
     { title: "Jump to Act 03: The 6-Entity Solo Operator (PICC/MIDF)", cat: "Story", action: () => { window.location.hash = '#act-03'; } },
     { title: "Jump to Act 04: National Smart City (JomParking)", cat: "Story", action: () => { window.location.hash = '#act-04'; } },
-    { title: "Jump to Act 05: Executive Directorship & AI (SuamiSihat)", cat: "Story", action: () => { window.location.hash = '#act-05'; } }
+    { title: "Jump to Act 05: Creative Leadership & AI (SuamiSihat)", cat: "Story", action: () => { window.location.hash = '#act-05'; } }
   ];
 
   function renderMatches(q = '') {
@@ -601,7 +601,7 @@ function initResumeAndContact() {
 
   copyBtn?.addEventListener('click', async () => {
     const dossierText = `MUHAMMAD HARUSSANI BIN ABDUL MANAP
-Head of Creatives · Statutory Director (SST) · Systems Architect
+Head of Creatives · Chief Brand Officer · Systems Architect
 Location: Banting & Shah Alam, Selangor, Malaysia
 Portfolio: https://manaphassan.github.io/manaphassan_portfolio/
 LinkedIn: https://www.linkedin.com/in/manaphassan
