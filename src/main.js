@@ -440,23 +440,17 @@ function renderCredentialsAndSkills() {
 
   if (skillsContainer) {
     skillsContainer.innerHTML = `
-      <span class="font-mono text-xs uppercase tracking-wider text-paper-500 font-bold block mb-2">[FOUR CORE COMPETENCY DOMAINS]</span>
+      <span class="font-mono text-xs uppercase tracking-wider text-paper-500 font-bold block mb-2">[CORE DISCIPLINES & PRACTICE]</span>
       <div class="space-y-4">
         ${skillDomains.map(d => `
           <div class="p-5 rounded-xl border border-paper-200 bg-white">
             <h4 class="font-bold text-base text-paper-950 mb-1">${d.title}</h4>
-            <p class="text-xs text-paper-600 mb-4">${d.description}</p>
-            <div class="space-y-2.5">
+            <p class="text-xs text-paper-600 mb-3">${d.description}</p>
+            <div class="flex flex-wrap gap-2 pt-1">
               ${d.skills.map(s => `
-                <div>
-                  <div class="flex justify-between font-mono text-xs mb-1">
-                    <span class="text-paper-800 font-medium">${s.name}</span>
-                    <span class="text-paper-950 font-bold">${s.level}%</span>
-                  </div>
-                  <div class="w-full h-1.5 bg-paper-150 rounded-full overflow-hidden">
-                    <div class="h-full bg-paper-950 rounded-full" style="width: ${s.level}%"></div>
-                  </div>
-                </div>
+                <span class="px-2.5 py-1 rounded-lg bg-paper-50 text-paper-800 font-mono text-xs font-medium border border-paper-200">
+                  ${typeof s === 'string' ? s : s.name}
+                </span>
               `).join('')}
             </div>
           </div>
@@ -475,7 +469,7 @@ async function fetchGitHubRepos() {
 
   const fallbackRepos = [
     {
-      name: "ss_cam",
+      name: "SS-CAM (SuamiSihat Creative Asset Management)",
       description: "Windows deployment utility for SuamiSihat creative workstations — installs brand typography, palettes, asset libraries, and project folder generator.",
       language: "PowerShell / Shell",
       stargazers_count: 8,
@@ -483,7 +477,7 @@ async function fetchGitHubRepos() {
     },
     {
       name: "manaphassan_portfolio",
-      description: "Interactive 19-year narrative career growth chronicle and systems monograph hosted on GitHub Pages.",
+      description: "Interactive narrative career growth chronicle and systems monograph hosted on GitHub Pages.",
       language: "JavaScript",
       stargazers_count: 4,
       html_url: "https://github.com/manaphassan/manaphassan_portfolio"
@@ -558,7 +552,7 @@ function initCommandPalette() {
     { title: "JomParking® Platform (web.jomparking.com)", cat: "Live Platform", action: () => window.open('https://web.jomparking.com/', '_blank') },
     { title: "GoPayy+ Digital Payment (govicle.com/gopayy)", cat: "Live Platform", action: () => window.open('https://govicle.com/gopayy/', '_blank') },
     { title: "SuamiSihat™ Design System (Single Source of Truth)", cat: "Live System", action: () => window.open('https://assets.suamisihat.myds.me/', '_blank') },
-    { title: "SuamiSihat ss_cam Workstation Tool (GitHub)", cat: "Code", action: () => window.open('https://github.com/SuamiSihat/ss_cam', '_blank') },
+    { title: "SS-CAM (SuamiSihat Creative Asset Management) Workstation Tool (GitHub)", cat: "Code", action: () => window.open('https://github.com/SuamiSihat/ss_cam', '_blank') },
     { title: "LinkedIn Profile (linkedin.com/in/manaphassan)", cat: "Profile", action: () => window.open(externalProfiles.linkedin, '_blank') },
     { title: "Behance Portfolio (behance.net/manaphassan)", cat: "Profile", action: () => window.open(externalProfiles.behance, '_blank') },
     { title: "Borneo Showreel on YouTube", cat: "Media", action: () => window.open(externalProfiles.borneoShowreel, '_blank') },
@@ -656,7 +650,7 @@ function initResumeAndContact() {
       'VERSION:3.0',
       'FN:Harussani Manaphassan',
       'N:Manaphassan;Harussani;;;',
-      'TITLE:Head of Creatives · Product Design Lead · Brand Systems Architect',
+      'TITLE:Creative Director · Brand Systems Architect',
       'ORG:SuamiSihat · Appcable',
       'EMAIL;TYPE=INTERNET;TYPE=WORK:harussani.manaphassan@gmail.com',
       'URL:https://manaphassan.github.io/manaphassan_portfolio/',
@@ -664,7 +658,7 @@ function initResumeAndContact() {
       'URL;TYPE=Behance:https://www.behance.net/manaphassan',
       'URL;TYPE=GitHub:https://github.com/manaphassan',
       'ADR;TYPE=WORK:;;Banting • Cyberjaya • Shah Alam;Selangor;;;Malaysia',
-      'NOTE:19-Year Career Growth Portfolio. Brand Architecture, Product UI/UX, Pre-Press Print, and Creative Leadership.',
+      'NOTE:Portfolio of Harussani Manaphassan. Creative Direction, Brand Systems Architecture, Product UI/UX, and Pre-Press Print.',
       'END:VCARD'
     ].join('\r\n');
 

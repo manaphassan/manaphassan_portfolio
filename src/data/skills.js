@@ -5,11 +5,11 @@ export const skillDomains = [
     color: "blue",
     description: "Designing coherent visual identity systems, packaging, and brand languages that scale across multi-brand holding groups and retail touchpoints.",
     skills: [
-      { name: "Visual Identity Systems & Typography", level: 98 },
-      { name: "Art Direction & Creative Leadership", level: 96 },
-      { name: "Packaging Design & Physical POSM", level: 94 },
-      { name: "Brand Architecture & Guidelines", level: 95 },
-      { name: "Campaign & Performance Creative", level: 90 }
+      "Visual Identity Systems & Typography",
+      "Art Direction & Creative Leadership",
+      "Packaging Design & Physical POSM",
+      "Brand Architecture & Guidelines",
+      "Campaign & Performance Creative"
     ]
   },
   {
@@ -18,11 +18,11 @@ export const skillDomains = [
     color: "cyan",
     description: "Translating business goals into intuitive digital products, from information architecture and wireframing to high-fidelity UI and pitch decks.",
     skills: [
-      { name: "Mobile UI/UX Design (iOS & Android)", level: 94 },
-      { name: "Information Architecture & Wireframing", level: 95 },
-      { name: "Pitch Deck Design & Investor Storytelling", level: 96 },
-      { name: "Design Systems & Component Libraries", level: 92 },
-      { name: "User Journey Mapping & Prototyping", level: 90 }
+      "Mobile UI/UX Design (iOS & Android)",
+      "Information Architecture & Wireframing",
+      "Pitch Deck Design & Investor Storytelling",
+      "Design Systems & Component Libraries",
+      "User Journey Mapping & Prototyping"
     ]
   },
   {
@@ -31,11 +31,11 @@ export const skillDomains = [
     color: "purple",
     description: "Augmenting creative output with modern generative AI video workflows and automated asset pipelines to maximize commercial speed.",
     skills: [
-      { name: "Google Veo AI Commercial Video Workflows", level: 95 },
-      { name: "Generative AI Visual Direction", level: 92 },
-      { name: "Creative Asset Automation Pipelines", level: 88 },
-      { name: "Video Post-Production & Motion Graphics", level: 90 },
-      { name: "Front-End Developer Handoff & Specs", level: 88 }
+      "Google Veo AI Commercial Video Workflows",
+      "Generative AI Visual Direction",
+      "Creative Asset Automation Pipelines",
+      "Video Post-Production & Motion Graphics",
+      "Front-End Developer Handoff & Specs"
     ]
   },
   {
@@ -44,11 +44,11 @@ export const skillDomains = [
     color: "amber",
     description: "Managing creative project direction from concept to delivery, fostering long-term founder partnerships, and understanding production constraints.",
     skills: [
-      { name: "End-to-End Creative Project Direction", level: 95 },
-      { name: "Multi-Brand Portfolio Direction (9 Brands)", level: 94 },
-      { name: "Founder Collaboration & Stakeholder Pitching", level: 96 },
-      { name: "Industrial Pre-Press & Print Production", level: 96 },
-      { name: "Broadcast TV & Documentary Production", level: 88 }
+      "End-to-End Creative Project Direction",
+      "Multi-Brand Portfolio Direction (9 Brands)",
+      "Founder Collaboration & Stakeholder Pitching",
+      "Industrial Pre-Press & Print Production",
+      "Broadcast TV & Documentary Production"
     ]
   }
 ];
