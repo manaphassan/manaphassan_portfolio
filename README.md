@@ -1,78 +1,92 @@
-# Harussani Manaphassan — Career Portfolio & Architecture Hub
+# Harussani Manaphassan — Design & Brand Systems Portfolio
 
-> **Live Deployment:** [https://manaphassan.github.io/manaphassan_portfolio/](https://manaphassan.github.io/manaphassan_portfolio/)  
-> **Repository:** [manaphassan/manaphassan_portfolio](https://github.com/manaphassan/manaphassan_portfolio)  
-> **Identity:** Head of Creatives &middot; Chief Brand Officer &middot; Brand Systems Architect &middot; AI Systems Architect
-
----
-
-## 🧭 Overview
-
-An interactive, high-performance narrative portfolio showcasing 19 years of compounding executive leadership, product strategy, brand governance, and autonomous AI systems engineering.
-
-### Key Interactive Features
-- **3-Lens Mode Switcher**: View the journey from an Executive & Product Strategy angle, Brand & Creative Direction angle, or AI & Systems Lab angle.
-- **19-Year Career Arc (2007–2026)**: Chronological timeline with proof badges (RM100K MDEC grant, Rice Bowl Startup Award, KKM/FINAS PSA Award).
-- **Curated Work Gallery with Lightbox**: Client mockups spanning PICC, MIDF Property, TH Hotel, Bollymuzik.fm, SuamiSihat packaging, and outdoor billboards.
-- **AI & Systems Lab**: Interactive 5-agent cognitive architecture diagram (`NOVA`, `ARIA`, `FINA`, `MIRA`, `AXEL`), Google Veo AI video production pipeline, and MEENA Home AI (Raspberry Pi LCARS).
-- **Cinematic Borneo Media Hub**: Embedded video theater streaming the Borneo showreel and broadcast documentary portfolio.
-- **Live GitHub Radar**: Real-time repository telemetry via GitHub API.
-- **Interactive Command Palette (`Ctrl+K`)**: Rapid keyboard search across all projects, eras, and contact actions.
-- **Executive CV Modal with Print Styles**: Clean 1-page executive resume ready to print or save to PDF.
+> **Creative Director · Brand Systems Architect**  
+> *Banting • Cyberjaya • Shah Alam, Malaysia*  
+> 🌐 **Live Portfolio:** [https://manaphassan.github.io/manaphassan_portfolio/](https://manaphassan.github.io/manaphassan_portfolio/)
 
 ---
 
-## 🛠️ Tech Stack
+## 🧭 About
 
-- **Framework / Bundler:** [Vite](https://vitejs.dev/)
-- **Styling:** [Tailwind CSS v3](https://tailwindcss.com/)
+A story-driven, interactive portfolio chronicling the career journey of **Harussani Manaphassan** ([manaphassan](https://github.com/manaphassan)). Spanning hands-on commercial pre-press production and national broadcast media to municipal smart mobility platforms (JomParking®), digital payment suites (GoPayy+), venture brand design systems, and modern AI-assisted creative workflows.
+
+---
+
+## 🎯 Core Disciplines
+
+- **Brand Systems & Creative Direction**: Multi-brand holding group identity frameworks, design tokens, packaging dielines, and retail POSM.
+- **Product Design & UI/UX Architecture**: Translating user and business needs into intuitive mobile applications, interactive prototypes, and grant-winning investor pitch decks.
+- **Creative Technology & Workflows**: Commercial AI video production pipelines (Google Veo), creative asset automation ([SS-CAM](https://github.com/SuamiSihat/ss_cam)), and developer handoff specifications.
+- **Commercial Print & Outdoor Media**: Large-format billboard templates, acrylic exhibition displays, and precision pre-press direct-to-plate CMYK operations.
+
+---
+
+## 🏆 Featured Highlights & Work
+
+| Project / System | Focus Area | Scope & Impact |
+| :--- | :--- | :--- |
+| **[SuamiSihat Telehealth App](https://assets.suamisihat.myds.me/)** | Product Design Lead | Structured core UX, wireframes, UI mockups, and the winning pitch deck securing an **RM100,000 MDEC CIP SPARK Grant**. |
+| **[JomParking®](https://web.jomparking.com/) & [GoPayy+](https://govicle.com/gopayy/)** | Creative Direction | Directed enterprise brand design across 5 IoT product lines; recognized with the **Best IoT Startup Malaysia Award** at Rice Bowl Startup Awards (ASEAN Finalist). |
+| **[Appcable](https://appcable.com/)** | Brand Systems Architect | Corporate visual identity system, Swiss-grid stationery, executive collateral suite, and brand guidelines. |
+| **[SS-CAM (SuamiSihat Creative Asset Management)](https://github.com/SuamiSihat/ss_cam)** | Systems Creator | Windows creative workstation deployment utility standardizing fonts, color palettes, folder hierarchy, and Job ID tracking. |
+
+---
+
+## ⚡ Portfolio Features
+
+- **Interactive Timeline Spine**: Scroll-reactive vertical spine tracking reading depth through career eras.
+- **Top Reading Progress Bar**: Real-time reading depth indicator.
+- **Discipline Quick-Filters**: Instant client-side filtering for UI/UX, Brand Systems, Packaging, and Creative Tech.
+- **Interactive Lightbox**: Detailed case study modals with asset galleries and impact summaries.
+- **Automated Dynamic Date Engine**: Self-calculating practice milestones and footer copyright year.
+- **Save vCard (`.vcf`)**: Client-side RFC 2426 vCard generator compatible with Apple Contacts, Google Contacts, and Outlook.
+- **Printable Executive CV**: Clean 1-page printable resume stylesheet (`Ctrl+P` ready).
+- **Command Palette (`Ctrl+K`)**: Rapid keyboard navigation across projects and profiles.
+
+---
+
+## 🛠️ Built With
+
+- **Core:** Semantic HTML5, Vanilla JavaScript (ES Modules)
+- **Bundler:** [Vite](https://vitejs.dev/)
+- **Styles:** [Tailwind CSS v3](https://tailwindcss.com/)
 - **Icons:** [Lucide Icons](https://lucide.dev/)
-- **Visuals:** [Canvas Confetti](https://www.npmjs.com/package/canvas-confetti)
-- **Audio:** Web Audio API (native browser synthesized ambient soundscape)
-- **Hosting:** GitHub Pages with automated GitHub Actions CI/CD (`.github/workflows/deploy.yml`)
+- **Animation:** CSS Keyframes & [Canvas Confetti](https://www.npmjs.com/package/canvas-confetti)
+- **Deployment:** [GitHub Pages](https://pages.github.com/) via GitHub Actions CI/CD (`.github/workflows/deploy.yml`)
 
 ---
 
 ## 🚀 Local Development
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+To run this project locally:
 
-2. **Start development server:**
-   ```bash
-   npm run dev
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/manaphassan/manaphassan_portfolio.git
+cd manaphassan_portfolio
 
-3. **Build static production bundle:**
-   ```bash
-   npm run build
-   ```
+# Install dependencies
+npm install
 
-4. **Preview production build locally:**
-   ```bash
-   npm run preview
-   ```
+# Start local dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build locally
+npm run preview
+```
 
 ---
 
-## 📦 GitHub Pages Deployment
+## 📬 Connect
 
-This repository includes a pre-configured GitHub Actions workflow in `.github/workflows/deploy.yml`.
+- **Live Portfolio:** [https://manaphassan.github.io/manaphassan_portfolio/](https://manaphassan.github.io/manaphassan_portfolio/)
+- **LinkedIn:** [linkedin.com/in/manaphassan](https://www.linkedin.com/in/manaphassan)
+- **Behance:** [behance.net/manaphassan](https://www.behance.net/manaphassan)
+- **GitHub:** [github.com/manaphassan](https://github.com/manaphassan)
 
-### First-Time Setup on GitHub:
-1. Push this repository to GitHub:
-   ```bash
-   git add .
-   git commit -m "feat: initial interactive portfolio release"
-   git branch -M main
-   git remote add origin https://github.com/manaphassan/manaphassan_portfolio.git
-   git push -u origin main
-   ```
-2. In your GitHub repository settings:
-   - Navigate to **Settings &rarr; Pages**.
-   - Under **Build and deployment &rarr; Source**, select **GitHub Actions**.
-3. Every push to `main` will now automatically build and deploy to:
-   `https://manaphassan.github.io/manaphassan_portfolio/`
->>>>>>> a739537 (feat: story-driven 19-year portfolio with enhanced readable typography, reorganized mywork assets, and live project links)
+---
+
+&copy; 2007 – Present Harussani Manaphassan. All rights reserved.
