@@ -1,10 +1,10 @@
 export const projectCategories = [
   { id: "all", label: "All Works" },
-  { id: "brand-corp", label: "Enterprise & Identity" },
-  { id: "product-ux", label: "Product & UI/UX" },
-  { id: "print-posm", label: "Print & Merchandising" },
-  { id: "ai-systems", label: "AI & Systems Lab" },
-  { id: "media-motion", label: "Motion & Media" }
+  { id: "brand-corp", label: "Brand Architecture & Identity" },
+  { id: "product-ux", label: "Digital Product & UI/UX" },
+  { id: "print-posm", label: "Packaging & Print" },
+  { id: "ai-systems", label: "Creative Tech & AI Workflows" },
+  { id: "media-motion", label: "Broadcast & Motion" }
 ];
 
 export const externalProfiles = {
@@ -23,7 +23,7 @@ export const projects = [
   {
     id: "suamisihat-design-system",
     act: 5,
-    actTitle: "Act 05: Creative Leadership & AI Scale",
+    actTitle: "Act 05: Creative Leadership & Product Direction",
     title: "SuamiSihat™ Design System — Single Source of Truth",
     client: "Suamisihat Holding Sdn. Bhd.",
     category: "product-ux",
@@ -46,7 +46,7 @@ export const projects = [
   {
     id: "ss-cam-tool",
     act: 5,
-    actTitle: "Act 05: Creative Leadership & AI Scale",
+    actTitle: "Act 05: Creative Leadership & Product Direction",
     title: "SuamiSihat / ss_cam — Creative Workstation Automation",
     client: "SuamiSihat Creative Operations",
     category: "ai-systems",
@@ -67,16 +67,16 @@ export const projects = [
   {
     id: "suamisihat-app",
     act: 5,
-    actTitle: "Act 05: Creative Leadership & AI Scale",
-    title: "SuamiSihat Mobile App & Tech Subsidiary",
+    actTitle: "Act 05: Creative Leadership & Product Direction",
+    title: "SuamiSihat Telehealth & Mobile App",
     client: "Suamisihat Technology Sdn. Bhd.",
     category: "product-ux",
-    lens: ["executive", "tech", "creative"],
+    lens: ["creative", "tech"],
     year: "2024 – Present",
-    badge: "RM100K MDEC Grant & Product Lead",
-    summary: "Originated the mobile application concept internally. Authored full UI/UX, user flows, subscription tiers, and the successful MDEC CIP SPARK grant application that founded SST as a dedicated tech subsidiary.",
-    deliverables: ["Mobile UI/UX Architecture", "Subscription Tier Design", "MDEC CIP SPARK Pitch", "Product Origination Specs"],
-    impact: "Originated internal app concept securing RM100,000 MDEC CIP SPARK grant and founding SST tech subsidiary.",
+    badge: "Product Design & MDEC Grant Pitch",
+    summary: "Conceptualized the digital health platform from zero to one. Designed the complete user experience, information architecture, wireframes, high-fidelity UI mockups, and the comprehensive pitch deck that helped the company secure RM100,000 in MDEC CIP SPARK grant funding. Directed creative product execution through final delivery.",
+    deliverables: ["Pitch Deck & Presentation", "User Flows & Wireframes", "High-Fidelity Mobile UI", "Creative Project Direction"],
+    impact: "Designed the pitch deck that helped unlock RM100,000 in MDEC CIP SPARK funding and established the digital product foundation for the venture.",
     image: "mywork/03-digital-product-ui/suamisihat-app/suamisihat-app-preview.jpg",
     gallery: [
       "mywork/03-digital-product-ui/suamisihat-app/suamisihat-app-preview.jpg",
@@ -84,22 +84,22 @@ export const projects = [
     ],
     links: [
       { label: "Ecosystem Hub", url: "https://suamisihat.com.my" },
-      { label: "LinkedIn Profile", url: "https://www.linkedin.com/in/manaphassan" }
+      { label: "Design System", url: "https://assets.suamisihat.myds.me/" }
     ]
   },
   {
     id: "ai-video-veo",
     act: 5,
-    actTitle: "Act 05: Creative Leadership & AI Scale",
+    actTitle: "Act 05: Creative Leadership & Product Direction",
     title: "Google Veo AI Commercial Video Pipeline",
     client: "Suamisihat Ecommerce Sdn. Bhd.",
     category: "ai-systems",
     lens: ["tech", "creative"],
     year: "2025 – Present",
-    badge: "High-Velocity AI Pipeline",
-    summary: "Pioneered a scalable commercial AI video production pipeline using Google Veo and generative imagery for Dr. MIT Ring Season 1 (13 episodes + 1 feature film) at a sustained daily velocity of ≥10 video variations.",
-    deliverables: ["13 AI Video Episodes", "Feature Film (S1E14)", "Prompt-to-Render Pipeline SOP", "Ad Hook Matrix"],
-    impact: "Reduced video creative production cycle time by over 80% while establishing an automated commercial creative engine.",
+    badge: "AI Video Creative Direction",
+    summary: "Built a high-velocity commercial AI video creative workflow leveraging Google Veo and generative image engines for Dr. MIT Ring Season 1 (13 episodes + 1 feature film), producing scalable, high-converting ad variations.",
+    deliverables: ["13 AI Video Episodes", "Feature Film (S1E14)", "Creative Prompt Engineering SOP", "Direct-Response Ad Matrix"],
+    impact: "Cut commercial video turnaround by 80% while establishing an automated creative engine for direct-to-consumer campaigns.",
     image: "mywork/02-commercial-print-posm/billboards-outdoor/billboard-display-urban.jpg",
     gallery: [
       "mywork/02-commercial-print-posm/billboards-outdoor/billboard-display-urban.jpg",
@@ -107,23 +107,24 @@ export const projects = [
     ]
   },
   {
-    id: "appcable-ai-agents",
+    id: "appcable-brand-system",
     act: 5,
-    actTitle: "Act 05: Creative Leadership & AI Scale",
-    title: "Appcable Autonomous Multi-Agent OS",
+    actTitle: "Act 05: Creative Leadership & Product Direction",
+    title: "Appcable — Brand Identity & Design Systems",
     client: "Appcable Sdn. Bhd.",
-    category: "ai-systems",
-    lens: ["tech", "executive"],
-    year: "2026",
-    badge: "5-Agent AI Architecture",
-    summary: "Architected a cohesive 5-agent AI operating system (NOVA, ARIA, FINA, MIRA, AXEL) orchestrated via automated webhook pipelines, NocoBase relational ledgers, Claude API, and Telegram for automated business operations and executive telemetry.",
-    deliverables: ["Agent OS Architecture Specs", "Autonomous Workflow Pipelines", "NocoBase Relational Ledgers", "Agent Dispatch Protocols"],
-    impact: "Automated business telemetry, financial auditing, and multi-channel customer communications on private server infrastructure.",
+    category: "brand-corp",
+    lens: ["creative", "tech"],
+    year: "2024 – Present",
+    badge: "Brand Identity & Systems",
+    summary: "Designed the corporate brand identity, geometric logo system, typography hierarchy, business cards, corporate letterhead, and brand apparel for Appcable. Established streamlined creative operations and automated design workflows to scale brand execution.",
+    deliverables: ["Corporate Visual Identity", "Stationery & Collateral Suite", "Brand Guidelines", "Design & Workflow Automation"],
+    impact: "Established a cohesive, modern brand identity across physical and digital touchpoints for an emerging automation venture.",
     image: "mywork/03-digital-product-ui/appcable/appcable-logo-identity.jpg",
     gallery: [
       "mywork/03-digital-product-ui/appcable/appcable-logo-identity.jpg",
       "mywork/03-digital-product-ui/appcable/appcable-letterhead.jpg",
-      "mywork/03-digital-product-ui/appcable/appcable-business-card.jpg"
+      "mywork/03-digital-product-ui/appcable/appcable-business-card.jpg",
+      "mywork/03-digital-product-ui/appcable/appcable-tshirt-mockup.jpg"
     ],
     links: [
       { label: "Appcable.com", url: "https://appcable.com/" }

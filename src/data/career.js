@@ -3,28 +3,28 @@ export const careerEras = [
     act: 5,
     actNumber: "05",
     era: "2024 – Present",
-    actTitle: "Creative Leadership & Autonomous AI Scale",
-    role: "Head of Creatives · Chief Brand Officer · Brand Systems Architect",
+    actTitle: "Creative Leadership & Product Direction",
+    role: "Head of Creatives · Product Design Lead · Brand Systems Architect",
     organization: "Suamisihat Holding · Suamisihat Tech · Appcable",
     location: "Banting & Shah Alam, Selangor",
-    badge: "Creative Lead & RM100K Grant",
+    badge: "Product Lead & MDEC Grant Pitch",
     badgeColor: "amber",
-    lens: ["executive", "creative", "tech"],
-    storyThesis: "Entering as Senior Designer, I originated the mobile app internally. This work resulted in the incorporation of a dedicated tech subsidiary (SST) and securing a six-figure government grant (MDEC CIP SPARK). Simultaneously appointed Head of Creatives across 9 holding entities, I engineered an automated commercial AI video pipeline with Google Veo producing ≥10 assets daily, and co-architected Appcable's 5-Agent Autonomous AI OS.",
+    lens: ["creative", "tech"],
+    storyThesis: "Stepped in as Product Design Lead to conceptualize the mobile health platform from zero to one. I structured core features, mapped user journeys, built interactive wireframes and UI mockups, and designed the winning pitch deck that helped the company secure a RM100,000 MDEC CIP SPARK grant. Concurrently, as Head of Creatives across 9 venture brands, I built the SuamiSihat Design System, introduced AI-assisted video workflows with Google Veo for high-velocity commercial campaigns, and directed the corporate brand identity for Appcable.",
     highlights: [
-      "Originated SuamiSihat mobile app & secured RM100,000 MDEC CIP SPARK Grant.",
-      "Product Design Lead & Founding Contributor for Suamisihat Technology Sdn. Bhd.",
-      "Formally contracted as Head of Creatives governing brand architecture across 9 holding entities.",
-      "Built Google Veo commercial AI video production pipeline (Dr. MIT Ring S1: 13 episodes + 1 feature film).",
-      "Concurrent Chief Brand Officer at Appcable architecting a 5-agent AI operating system (NOVA, ARIA, FINA, MIRA, AXEL)."
+      "Product Design Lead: designed core features, UX flows, UI mockups, and winning MDEC CIP SPARK grant pitch deck (RM100K secured).",
+      "Managed creative and product direction end-to-end from initial concept through technical developer handoff.",
+      "Head of Creatives: directed brand identity, packaging, and design systems across 9 venture brands and subsidiaries.",
+      "Pioneered commercial AI video creative pipelines with Google Veo to rapidly produce high-performing e-commerce ad variants.",
+      "Brand Systems Architect for Appcable: created the full corporate visual identity, stationery suite, and design workflows."
     ],
     proofBadges: [
-      { label: "MDEC CIP SPARK Grant", value: "RM 100,000 Awarded", icon: "award" },
-      { label: "Subsidiary Origination", value: "SST Incorporated", icon: "shield-check" },
-      { label: "Entities Governed", value: "9 Subsidiaries", icon: "layers" },
-      { label: "AI Production Velocity", value: "≥10 Videos/Day", icon: "video" }
+      { label: "MDEC Grant Pitch", value: "RM 100K Secured", icon: "award" },
+      { label: "Product UX Delivery", value: "0 → 1 Product", icon: "layout" },
+      { label: "Venture Brands", value: "9 Brand Systems", icon: "layers" },
+      { label: "Creative Velocity", value: "AI Video Pipeline", icon: "video" }
     ],
-    projectIds: ["suamisihat-app", "ai-video-veo", "appcable-ai-agents"]
+    projectIds: ["suamisihat-app", "ai-video-veo", "appcable-brand-system"]
   },
   {
     act: 4,
@@ -36,7 +36,7 @@ export const careerEras = [
     location: "Cyberjaya, Selangor",
     badge: "Best IoT Startup Malaysia",
     badgeColor: "cyan",
-    lens: ["executive", "creative", "tech"],
+    lens: ["creative", "tech"],
     storyThesis: "Joined as the sole creative lead for JomParking®—a nationally deployed municipal smart parking platform. Owned the brand through rapid national adoption, leading to the Best IoT Startup Malaysia award at the Rice Bowl Startup Awards (ASEAN Finalist). Promoted to Head of Creative Department in 2021, I spearheaded the enterprise rebrand to Govicle, leading creative strategy across 5 product lines for municipal councils across Southeast Asia.",
     highlights: [
       "Complete brand ownership for JomParking® nationwide platform across consumer and municipal tiers.",
@@ -57,18 +57,18 @@ export const careerEras = [
     actNumber: "03",
     era: "2012 – 2018",
     actTitle: "The Solo Operator — 6-Entity Synergy & Compounding Trust",
-    role: "Multimedia Designer & Creative Engine",
+    role: "Multimedia Designer & Creative Lead",
     organization: "SMSfocal Group (6 Entities)",
     location: "Puchong & Putrajaya",
     badge: "6 Entities Concurrently",
     badgeColor: "purple",
-    lens: ["creative", "executive"],
-    storyThesis: "Hired as a designer, I became the sole creative resource supporting six business entities simultaneously under a single founder: software development, IT hardware supply, Restoran Chamcha (F&B), walk-in digital print at PICC (DTP PLT), and industrial large-format signages (Trapezoid Media). This intense 6-year operational trial forged a 14-year trust bond with the founder, who later invited me to lead Govicle and Appcable.",
+    lens: ["creative"],
+    storyThesis: "Hired as a designer, I became the sole creative engine supporting six distinct business entities simultaneously under a single founder: software development, IT hardware supply, Restoran Chamcha (F&B), walk-in digital print at PICC (DTP PLT), and industrial large-format signages (Trapezoid Media). This intense 6-year operational trial forged a 14-year trust bond with the founder, who later invited me to lead Govicle and Appcable.",
     highlights: [
       "Simultaneously maintained distinct commercial identities for 6 unrelated business entities.",
       "Operated end-to-end design and production across small and large-format print houses.",
       "Delivered landmark corporate identity and fleet branding for Putrajaya International Convention Centre (PICC) and MIDF Property Berhad.",
-      "Established an enduring 14-year founder trust relationship carrying through to modern executive roles."
+      "Established an enduring 14-year founder trust relationship carrying through to modern leadership roles."
     ],
     proofBadges: [
       { label: "Founder Trust Network", value: "14+ Years", icon: "handshake" },
@@ -81,7 +81,7 @@ export const careerEras = [
     act: 2,
     actNumber: "02",
     era: "2009 – 2012",
-    actTitle: "High-Stakes Broadcast Media & Government Communications",
+    actTitle: "Broadcast Television & Federal Communications",
     role: "Operations Manager · Embedded Photojournalist",
     organization: "Ministry of Home Affairs (KDN) · Galaxy Features Network",
     location: "Putrajaya & Subang Perdana",
@@ -129,9 +129,9 @@ export const careerEras = [
 ];
 
 export const executiveMetrics = [
-  { value: "19", label: "Years Practice", sub: "Print to Broadcast, IoT & AI", icon: "clock" },
-  { value: "100K", label: "MYR MDEC Grant", sub: "CIP SPARK Awarded (SST)", icon: "award" },
-  { value: "09", label: "Entities Governed", sub: "Brand Architecture Governance", icon: "layers" },
-  { value: "05", label: "IoT & Product Lines", sub: "Smart Mobility & Digital POS", icon: "shield-check" },
-  { value: "14+", label: "Years Trust", sub: "Continuous Founder Network", icon: "handshake" }
+  { value: "19", label: "Years Practice", sub: "Print to Digital & Product", icon: "clock" },
+  { value: "100K", label: "Grant Pitch Impact", sub: "MDEC CIP SPARK Secured", icon: "award" },
+  { value: "09", label: "Brand Systems", sub: "Venture Brands Directed", icon: "layers" },
+  { value: "05", label: "Product Lines", sub: "Smart Mobility & POS Suites", icon: "shield-check" },
+  { value: "14+", label: "Years Trust", sub: "Founder Partnership Network", icon: "handshake" }
 ];

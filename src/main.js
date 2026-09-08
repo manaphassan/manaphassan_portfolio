@@ -73,6 +73,7 @@ function renderProjectCard(p) {
   return `
     <article 
       data-id="${p.id}"
+      data-category="${p.category}"
       class="story-card group cursor-pointer border border-paper-200 rounded-2xl overflow-hidden bg-white hover:border-paper-400 transition-all flex flex-col justify-between">
       
       <div>
@@ -222,7 +223,7 @@ function openLightbox(projectId) {
       </li>
     `).join('')}
     <li class="pt-3 font-mono text-xs text-accent-blue font-bold">
-      [Verified Impact]: ${p.impact}
+      [Design & Commercial Impact]: ${p.impact}
     </li>
   `;
 
@@ -262,102 +263,150 @@ function openLightbox(projectId) {
 }
 
 /* ==========================================================================
-   5. AI & SYSTEMS LAB (APPCABLE AGENTS INSPECTOR)
+   5. FEATURED BRAND ARCHITECTURE (APPCABLE BRAND COLLATERAL SUITE)
    ========================================================================== */
-const agentsData = [
+const appcableAssets = [
   {
-    id: 'nova',
-    name: 'NOVA',
-    role: 'Operations & Orchestration',
-    mission: 'Asynchronous job dispatching, server health telemetry, and automated task scheduling across Appcable enterprise infrastructure.',
-    tech: 'Automated Webhooks · Docker · DietPi · Telegram',
-    trigger: 'Event Bus & Telemetry'
+    id: 'logo',
+    name: '01. Logo Mark',
+    title: 'Geometric Brand Mark & Identity Symbolism',
+    tag: 'Visual Identity',
+    image: 'mywork/03-digital-product-ui/appcable/appcable-logo-identity.jpg',
+    description: 'Designed a precise geometric mark conveying modern connectivity, modularity, and enterprise reliability for an emerging automation and systems brand.',
+    specs: 'Golden-ratio geometry, negative-space cable integration, vector master assets scalable from 16px favicon to large architectural signage.'
   },
   {
-    id: 'aria',
-    name: 'ARIA',
-    role: 'Communications & Multi-Channel Dispatch',
-    mission: 'Customer engagement dispatch, Evolution API WhatsApp webhooks, Telegram alerts, and executive briefing memos.',
-    tech: 'Evolution API · Telegram · Claude 3.5 Sonnet',
-    trigger: 'Incoming Inquiries & Alerts'
+    id: 'stationery',
+    name: '02. Letterhead',
+    title: 'Corporate Stationery & Formal Documentation',
+    tag: 'Print & Corporate',
+    image: 'mywork/03-digital-product-ui/appcable/appcable-letterhead.jpg',
+    description: 'Structured an authoritative, minimalist Swiss-grid letterhead for official client proposals, enterprise contracts, and corporate communications.',
+    specs: 'A4 format, strict baseline typographic grid, calibrated margins, and production-ready pre-flight CMYK values.'
   },
   {
-    id: 'fina',
-    name: 'FINA',
-    role: 'Financial Intelligence & Auditing',
-    mission: 'Reconciles multi-company recurring billing commitments, audits runway horizons, and tracks operating margins.',
-    tech: 'NocoBase · BigQuery · Master Ledgers',
-    trigger: 'Fiscal Close Routines'
+    id: 'card',
+    name: '03. Business Cards',
+    title: 'Executive Dual-Tone Business Card Suite',
+    tag: 'Tactile Collateral',
+    image: 'mywork/03-digital-product-ui/appcable/appcable-business-card.jpg',
+    description: 'Engineered high-contrast executive cards featuring blind deboss accents, tactile matte cardstock, and a dual-face color palette (clean white obverse with deep midnight reverse).',
+    specs: '350gsm premium cotton cardstock, spot UV coating, and precise bleed registration.'
   },
   {
-    id: 'mira',
-    name: 'MIRA',
-    role: 'Marketing Intelligence & Ad Matrix',
-    mission: 'Monitors TikTok/Meta campaign conversion rates, parses ad hooks, and compiles shot lists for video production.',
-    tech: 'Meta API · TikTok Ads · Claude API',
-    trigger: 'Hourly Campaign Sync'
-  },
-  {
-    id: 'axel',
-    name: 'AXEL',
-    role: 'Autonomous Execution & Releases',
-    mission: 'Automated data transformation, code deployments, GitHub releases, and synchronized backup snapshots.',
-    tech: 'Bash · Python CLI · GitHub API · Rsync',
-    trigger: 'Task Queue Work Orders'
+    id: 'merch',
+    name: '04. Apparel & Merch',
+    title: 'Brand Apparel & Team Merchandise',
+    tag: 'Physical Culture',
+    image: 'mywork/03-digital-product-ui/appcable/appcable-tshirt-mockup.jpg',
+    description: 'Designed understated, high-taste company apparel featuring subtle monochrome chest branding and typographic details on hem tags.',
+    specs: 'Vector screenprint separations, Pantone color specifications, and production garment templates.'
   }
 ];
 
-function initAgentTopology() {
-  const container = document.getElementById('agent-nodes-grid');
-  const inspector = document.getElementById('agent-node-inspector');
-  if (!container || !inspector) return;
+function initAppcableBrandShowcase() {
+  const tabsContainer = document.getElementById('appcable-tabs-grid');
+  const canvas = document.getElementById('appcable-canvas');
+  if (!tabsContainer || !canvas) return;
 
-  function renderInspector(agent) {
-    inspector.innerHTML = `
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-paper-200 gap-1 mb-3">
-        <div>
-          <span class="font-mono text-xs text-accent-blue font-bold uppercase tracking-wider">[ACTIVE AGENT NODE]</span>
-          <h5 class="font-bold text-base text-paper-950">
-            ${agent.name} &mdash; <span class="font-sans text-sm font-semibold text-paper-700">${agent.role}</span>
-          </h5>
+  function renderAsset(asset) {
+    canvas.innerHTML = `
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+        <div class="lg:col-span-7 rounded-xl overflow-hidden border border-paper-200 bg-paper-150 aspect-video sm:aspect-4/3 flex items-center justify-center group">
+          <img 
+            src="${encodeURI(asset.image)}" 
+            alt="${asset.title}" 
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            onerror="this.src='mywork/03-digital-product-ui/appcable/appcable-logo-identity.jpg';"
+          />
         </div>
-        <span class="font-mono text-xs text-accent-emerald font-bold">● ONLINE</span>
-      </div>
-      <p class="text-sm text-paper-800 leading-relaxed mb-4 font-sans">${agent.mission}</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-xs">
-        <div class="p-3.5 rounded-lg bg-paper-50 border border-paper-200">
-          <span class="text-paper-500 block text-xs uppercase font-bold">Tech Stack</span>
-          <strong class="text-paper-950 text-sm">${agent.tech}</strong>
-        </div>
-        <div class="p-3.5 rounded-lg bg-paper-50 border border-paper-200">
-          <span class="text-paper-500 block text-xs uppercase font-bold">Trigger Protocol</span>
-          <strong class="text-paper-950 text-sm">${agent.trigger}</strong>
+        <div class="lg:col-span-5 space-y-4">
+          <div>
+            <span class="font-mono text-xs px-2.5 py-1 rounded bg-accent-blue/10 text-accent-blue font-bold uppercase tracking-wider">
+              ${asset.tag}
+            </span>
+            <h4 class="font-display font-bold text-xl sm:text-2xl text-paper-950 mt-2 leading-snug">
+              ${asset.title}
+            </h4>
+          </div>
+          <p class="text-sm text-paper-700 leading-relaxed font-sans">
+            ${asset.description}
+          </p>
+          <div class="p-3.5 rounded-lg bg-paper-50 border border-paper-200 font-mono text-xs">
+            <span class="text-paper-500 block text-xs uppercase font-bold mb-1">Production & Design Specs</span>
+            <p class="text-paper-900 font-medium">${asset.specs}</p>
+          </div>
+          <div class="pt-2">
+            <a href="https://appcable.com/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 font-mono text-xs font-bold text-paper-950 hover:text-accent-blue transition-colors">
+              <span>View Live Appcable Platform</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
         </div>
       </div>
     `;
+    refreshIcons();
   }
 
-  container.innerHTML = agentsData.map((a, idx) => `
+  tabsContainer.innerHTML = appcableAssets.map((a, idx) => `
     <button 
-      data-agent="${a.id}"
-      class="agent-btn p-3 rounded-xl border text-left transition-all ${
+      data-asset="${a.id}"
+      class="appcable-tab-btn p-3 rounded-xl border text-left transition-all ${
         idx === 0 ? 'bg-paper-950 text-white font-bold' : 'bg-white border-paper-200 text-paper-800 hover:border-paper-400 font-medium'
       }">
       <span class="font-mono font-bold text-xs block">${a.name}</span>
-      <span class="text-xs opacity-80 truncate block">${a.role.split('&')[0]}</span>
+      <span class="text-xs opacity-80 truncate block">${a.tag}</span>
     </button>
   `).join('');
 
-  renderInspector(agentsData[0]);
+  renderAsset(appcableAssets[0]);
 
-  container.querySelectorAll('.agent-btn').forEach(btn => {
+  tabsContainer.querySelectorAll('.appcable-tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      container.querySelectorAll('.agent-btn').forEach(b => {
-        b.className = 'agent-btn p-3 rounded-xl border text-left transition-all bg-white border-paper-200 text-paper-800 hover:border-paper-400 font-medium';
+      tabsContainer.querySelectorAll('.appcable-tab-btn').forEach(b => {
+        b.className = 'appcable-tab-btn p-3 rounded-xl border text-left transition-all bg-white border-paper-200 text-paper-800 hover:border-paper-400 font-medium';
       });
-      btn.className = 'agent-btn p-3 rounded-xl border text-left transition-all bg-paper-950 text-white font-bold';
-      const agent = agentsData.find(a => a.id === btn.getAttribute('data-agent'));
-      if (agent) renderInspector(agent);
+      btn.className = 'appcable-tab-btn p-3 rounded-xl border text-left transition-all bg-paper-950 text-white font-bold';
+      const asset = appcableAssets.find(a => a.id === btn.getAttribute('data-asset'));
+      if (asset) renderAsset(asset);
+    });
+  });
+}
+
+/* ==========================================================================
+   DISCIPLINE FILTER SYSTEM
+   ========================================================================== */
+function initDisciplineFilter() {
+  const filterBtns = document.querySelectorAll('.filter-discipline-btn');
+  if (!filterBtns.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const discipline = btn.getAttribute('data-discipline');
+
+      filterBtns.forEach(b => {
+        b.className = 'filter-discipline-btn px-3 py-1 rounded-md border border-paper-200 bg-white text-paper-700 hover:text-paper-950 hover:border-paper-400 transition-all font-semibold shrink-0';
+      });
+      btn.className = 'filter-discipline-btn px-3 py-1 rounded-md border border-paper-950 bg-paper-950 text-white font-bold transition-all shrink-0 shadow-2xs';
+
+      const cards = document.querySelectorAll('.story-card');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (discipline === 'all') {
+          card.classList.remove('hidden');
+          card.style.opacity = '1';
+        } else if (
+          (discipline === 'product-ux' && cat === 'product-ux') ||
+          (discipline === 'brand-corp' && (cat === 'brand-corp' || cat === 'branding')) ||
+          (discipline === 'commercial-posm' && (cat === 'commercial-posm' || cat === 'print-posm')) ||
+          (discipline === 'creative-tech' && (cat === 'ai-systems' || cat === 'broadcast-video' || cat === 'media-motion'))
+        ) {
+          card.classList.remove('hidden');
+          card.style.opacity = '1';
+        } else {
+          card.classList.add('hidden');
+        }
+      });
     });
   });
 }
@@ -601,7 +650,7 @@ function initResumeAndContact() {
 
   copyBtn?.addEventListener('click', async () => {
     const dossierText = `HARUSSANI MANAPHASSAN
-Head of Creatives · Chief Brand Officer · Systems Architect
+Head of Creatives · Product Design Lead · Brand Systems Architect
 Location: Banting & Shah Alam, Selangor, Malaysia
 Portfolio: https://manaphassan.github.io/manaphassan_portfolio/
 LinkedIn: https://www.linkedin.com/in/manaphassan
@@ -635,7 +684,8 @@ Borneo Showreel: https://www.youtube.com/watch?v=xmuCcunYNGU&list=PL1BCB093F6610
 document.addEventListener('DOMContentLoaded', () => {
   renderHeroMetrics();
   renderActProjects();
-  initAgentTopology();
+  initDisciplineFilter();
+  initAppcableBrandShowcase();
   renderCredentialsAndSkills();
   fetchGitHubRepos();
   initScrollObserver();

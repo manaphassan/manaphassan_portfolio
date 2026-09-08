@@ -1,53 +1,53 @@
 export const skillDomains = [
   {
-    title: "Brand Architecture & Creative Direction",
+    title: "Brand Systems & Creative Direction",
     icon: "palette",
     color: "blue",
-    description: "Designing scalable identity systems that hold together across multi-entity holding groups, commercial packaging, and physical retail touchpoints.",
+    description: "Designing coherent visual identity systems, packaging, and brand languages that scale across multi-brand holding groups and retail touchpoints.",
     skills: [
-      { name: "Brand Architecture & Governance", level: 98 },
-      { name: "Visual Identity Systems & Typography", level: 96 },
-      { name: "Art Direction & Creative Leadership", level: 95 },
-      { name: "Packaging Design & Physical POSM", level: 92 },
-      { name: "Campaign & Direct-Response Design", level: 90 }
+      { name: "Visual Identity Systems & Typography", level: 98 },
+      { name: "Art Direction & Creative Leadership", level: 96 },
+      { name: "Packaging Design & Physical POSM", level: 94 },
+      { name: "Brand Architecture & Guidelines", level: 95 },
+      { name: "Campaign & Performance Creative", level: 90 }
     ]
   },
   {
-    title: "Product Strategy & UX/UI Architecture",
+    title: "Product Design & UX/UI Architecture",
     icon: "layout",
     color: "cyan",
-    description: "Originating software products from zero, defining user flows, subscription economic models, and driving development continuity post-handover.",
+    description: "Translating business goals into intuitive digital products, from information architecture and wireframing to high-fidelity UI and pitch decks.",
     skills: [
-      { name: "Mobile UI Design (React Native)", level: 94 },
-      { name: "Information Architecture & User Flows", level: 92 },
-      { name: "Subscription & Monetization Logic", level: 90 },
+      { name: "Mobile UI/UX Design (iOS & Android)", level: 94 },
+      { name: "Information Architecture & Wireframing", level: 95 },
+      { name: "Pitch Deck Design & Investor Storytelling", level: 96 },
       { name: "Design Systems & Component Libraries", level: 92 },
-      { name: "Web Interface & Conversion Funnels", level: 88 }
+      { name: "User Journey Mapping & Prototyping", level: 90 }
     ]
   },
   {
-    title: "AI & Autonomous Systems Engineering",
+    title: "Creative Tech & AI-Assisted Workflows",
     icon: "cpu",
     color: "purple",
-    description: "Pioneering generative AI video production pipelines and designing autonomous multi-agent systems for enterprise execution.",
+    description: "Augmenting creative output with modern generative AI video workflows and automated asset pipelines to maximize commercial speed.",
     skills: [
-      { name: "Google Veo AI Video Generation Pipeline", level: 95 },
-      { name: "Multi-Agent AI Architecture (NOVA, ARIA, FINA)", level: 90 },
-      { name: "Workflow Automation & NocoBase Ledgers", level: 88 },
-      { name: "Edge Hardware / LCARS AI (Raspberry Pi)", level: 86 },
-      { name: "Prompt Engineering & Content Automation", level: 94 }
+      { name: "Google Veo AI Commercial Video Workflows", level: 95 },
+      { name: "Generative AI Visual Direction", level: 92 },
+      { name: "Creative Asset Automation Pipelines", level: 88 },
+      { name: "Video Post-Production & Motion Graphics", level: 90 },
+      { name: "Front-End Developer Handoff & Specs", level: 88 }
     ]
   },
   {
-    title: "Executive Leadership & Operations",
+    title: "Creative Leadership & Project Delivery",
     icon: "briefcase",
     color: "amber",
-    description: "Navigating corporate governance, government grant acquisition, long-term founder trust networks, and commercial print machining.",
+    description: "Managing creative project direction from concept to delivery, fostering long-term founder partnerships, and understanding production constraints.",
     skills: [
-      { name: "Grant Writing & Pitch (MDEC CIP SPARK)", level: 92 },
-      { name: "Multi-Entity Creative Governance", level: 94 },
-      { name: "Cross-Entity Operational Leadership", level: 94 },
-      { name: "Commercial & Large-Format Machining", level: 96 },
+      { name: "End-to-End Creative Project Direction", level: 95 },
+      { name: "Multi-Brand Portfolio Direction (9 Brands)", level: 94 },
+      { name: "Founder Collaboration & Stakeholder Pitching", level: 96 },
+      { name: "Industrial Pre-Press & Print Production", level: 96 },
       { name: "Broadcast TV & Documentary Production", level: 88 }
     ]
   }
@@ -55,43 +55,43 @@ export const skillDomains = [
 
 export const verifiedCredentials = [
   {
-    title: "MDEC CIP SPARK Grant Recipient",
+    title: "MDEC CIP SPARK Pitch Deck & UI Lead",
     issuer: "Malaysia Digital Economy Corporation (MDEC)",
-    value: "RM 100,000 Awarded",
+    value: "RM 100,000 Secured for Venture",
     year: "2024",
-    detail: "Originated and authored product pitch for SuamiSihat mobile tech subsidiary.",
+    detail: "Designed user flows, wireframes, UI mockups, and the pitch deck that helped secure funding.",
     icon: "award"
   },
   {
-    title: "Head of Creatives (9 Entities)",
+    title: "Head of Creatives (9 Venture Brands)",
     issuer: "Suamisihat Holding Sdn. Bhd.",
-    value: "Executive Appointment",
+    value: "Creative Leadership",
     year: "2024 – Present",
-    detail: "Governing unified brand architecture across holding group subsidiaries.",
+    detail: "Directing brand identity, packaging, and design systems across 9 portfolio brands.",
     icon: "layers"
   },
   {
     title: "Best IoT Startup (Malaysia)",
-    issuer: "Malaysia Rice Bowl Startup Awards (ASEAN Ecosystem)",
+    issuer: "Malaysia Rice Bowl Startup Awards (ASEAN Circuit)",
     value: "National Winner & ASEAN Finalist",
     year: "2019",
-    detail: "JomParking® digital mobility and municipal parking management platform.",
+    detail: "JomParking® nationwide smart mobility brand identity and municipal product suite.",
     icon: "trophy"
   },
   {
     title: "2nd Place National PSA Scriptwriting Award",
-    issuer: "KKM · RTM · FINAS",
+    issuer: "Ministry of Health (KKM) · RTM · FINAS",
     value: "Naib Johan Penulisan Skrip TV",
     year: "2011",
-    detail: "Public Service Announcement for Organ Donation public health awareness.",
+    detail: "National public health television announcement on organ donation awareness.",
     icon: "medal"
   },
   {
-    title: "14-Year Principal Trust Network",
-    issuer: "Enterprise Principals & Founders",
-    value: "Continuous Partnership",
-    year: "2012 – 2026",
-    detail: "SMSfocal Group → JomParkir → Govicle → Appcable Chief Brand Officer.",
+    title: "14-Year Continuous Founder Partnership",
+    issuer: "Enterprise Founders & Principals",
+    value: "Continuous Trust Network",
+    year: "2012 – Present",
+    detail: "Ongoing creative direction across SMSfocal Group, JomParkir, Govicle, and Appcable.",
     icon: "handshake"
   }
 ];
