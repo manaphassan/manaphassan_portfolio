@@ -600,7 +600,7 @@ function initResumeAndContact() {
   const copyLabel = document.getElementById('copy-dossier-label');
 
   copyBtn?.addEventListener('click', async () => {
-    const dossierText = `MUHAMMAD HARUSSANI BIN ABDUL MANAP
+    const dossierText = `HARUSSANI MANAPHASSAN
 Head of Creatives · Chief Brand Officer · Systems Architect
 Location: Banting & Shah Alam, Selangor, Malaysia
 Portfolio: https://manaphassan.github.io/manaphassan_portfolio/
