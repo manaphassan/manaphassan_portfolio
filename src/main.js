@@ -736,9 +736,34 @@ function initScrollProgressAndTimelineSpine() {
 }
 
 /* ==========================================================================
+   11. DYNAMIC YEARS CALCULATION (FOOTER, TIMELINE & YEARS OF PRACTICE)
+   ========================================================================== */
+function initDynamicYears() {
+  const currentYear = new Date().getFullYear();
+  const startYear = 2007;
+  const yearsPractice = currentYear - startYear;
+
+  const footerYear = document.getElementById('footer-dynamic-year');
+  if (footerYear) {
+    footerYear.textContent = currentYear;
+  }
+
+  const timelineYear = document.getElementById('dynamic-current-year');
+  if (timelineYear) {
+    timelineYear.textContent = currentYear;
+  }
+
+  const dynamicYearsEls = document.querySelectorAll('.dynamic-years-practice');
+  dynamicYearsEls.forEach(el => {
+    el.textContent = `${yearsPractice} Years Professional Practice`;
+  });
+}
+
+/* ==========================================================================
    INITIALIZATION
    ========================================================================== */
 document.addEventListener('DOMContentLoaded', () => {
+  initDynamicYears();
   renderHeroMetrics();
   renderActProjects();
   initDisciplineFilter();

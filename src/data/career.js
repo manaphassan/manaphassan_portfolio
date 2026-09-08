@@ -128,8 +128,12 @@ export const careerEras = [
   }
 ];
 
+const currentYear = new Date().getFullYear();
+const startYear = 2007;
+export const yearsOfPractice = currentYear - startYear;
+
 export const executiveMetrics = [
-  { value: "02", label: "National Awards", sub: "Rice Bowl IoT & FINAS PSA", icon: "award" },
+  { value: String(yearsOfPractice), label: "Years Practice", sub: "Print to Digital & Product", icon: "clock" },
   { value: "100K", label: "Grant Pitch Impact", sub: "MDEC CIP SPARK Secured", icon: "award" },
   { value: "09", label: "Brand Systems", sub: "Venture Brands Directed", icon: "layers" },
   { value: "05", label: "Product Lines", sub: "Smart Mobility & POS Suites", icon: "shield-check" },
