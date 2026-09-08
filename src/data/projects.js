@@ -12,7 +12,8 @@ export const externalProfiles = {
   behance: "https://www.behance.net/manaphassan",
   github: "https://github.com/manaphassan",
   youtube: "https://www.youtube.com/@harussani.manaphassan",
-  borneoShowreel: "https://www.youtube.com/watch?v=xmuCcunYNGU&list=PL1BCB093F66106553"
+  borneoShowreel: "https://www.youtube.com/watch?v=xmuCcunYNGU&list=PL1BCB093F66106553",
+  appcable: "https://appcable.com/"
 };
 
 export const projects = [
@@ -123,6 +124,9 @@ export const projects = [
       "mywork/03-digital-product-ui/appcable/appcable-logo-identity.jpg",
       "mywork/03-digital-product-ui/appcable/appcable-letterhead.jpg",
       "mywork/03-digital-product-ui/appcable/appcable-business-card.jpg"
+    ],
+    links: [
+      { label: "Appcable.com", url: "https://appcable.com/" }
     ]
   },
 
