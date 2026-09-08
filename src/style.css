@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-white text-paper-950 font-sans antialiased selection:bg-paper-950 selection:text-white overflow-x-hidden text-base leading-relaxed;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-paper-950 tracking-tight font-bold;
+  }
+  p {
+    @apply text-paper-800;
+  }
+}
+
+@layer components {
+  .editorial-tag {
+    @apply font-mono text-xs uppercase tracking-wider text-paper-700 font-bold;
+  }
+  .editorial-divider {
+    @apply border-t border-paper-200 my-10;
+  }
+  .pill-btn {
+    @apply px-4 py-2 rounded-full text-sm font-mono font-semibold transition-all duration-200 border;
+  }
+}
+
+/* ==========================================================================
+   ANIMATED CSS MOTION SYSTEM
+   ========================================================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.15);
+  }
+}
+
+.story-chapter {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.story-chapter.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px -10px rgba(15, 23, 42, 0.08);
+}
+
+.act-marker-pulse {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Custom Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+dialog::backdrop {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+}
+
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #0F172A !important;
+    font-size: 12pt !important;
+  }
+  header, footer, nav, #story-nav-strip, #btn-cmd-palette, #btn-open-resume {
+    display: none !important;
+  }
+  #resume-dialog {
+    display: block !important;
+    position: static !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+}
