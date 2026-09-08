@@ -350,7 +350,7 @@ export const projects = [
     badge: "Machining & Pre-Press Discipline",
     summary: "Production design, large-format billboard advertisements, acrylic framing displays, and walk-in commercial print operations.",
     deliverables: ["Highway Billboard Templates", "Acrylic Frame Displays", "Pre-Press CMYK Workflows", "Direct-to-Plate Pre-Flight"],
-    impact: "Established the foundational production discipline and machine knowledge that anchors 19 years of subsequent leadership.",
+    impact: "Established the foundational production discipline and machine knowledge that anchors subsequent design leadership.",
     image: "mywork/02-commercial-print-posm/displays-frames/acrylic-frame-display.jpg",
     gallery: [
       "mywork/02-commercial-print-posm/displays-frames/acrylic-frame-display.jpg",

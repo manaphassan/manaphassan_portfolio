@@ -113,7 +113,7 @@ export const careerEras = [
     badge: "Commercial Print Foundations",
     badgeColor: "emerald",
     lens: ["creative"],
-    storyThesis: "Fresh from a Diploma in Multimedia Technology, my career began on the factory floor of a commercial printing press in Taiping. Machines dictated constraints, deadlines were unforgiving, and clients paid for physical outcomes. Promoted to Senior Designer, I helped launch the Kuala Kangsar branch—instilling the production discipline, pre-press mastery, and client accountability that grounded my entire 19-year trajectory.",
+    storyThesis: "Fresh from a Diploma in Multimedia Technology, my career began on the factory floor of a commercial printing press in Taiping. Machines dictated constraints, deadlines were unforgiving, and clients paid for physical outcomes. Promoted to Senior Designer, I helped launch the Kuala Kangsar branch—instilling the production discipline, pre-press mastery, and client accountability that grounded my entire design trajectory.",
     highlights: [
       "Operated industrial large-format presses, digital plotters, and direct-to-plate pre-flight workflows.",
       "Rapidly promoted from Junior to Senior Designer within tenure.",
@@ -129,7 +129,7 @@ export const careerEras = [
 ];
 
 export const executiveMetrics = [
-  { value: "19", label: "Years Practice", sub: "Print to Digital & Product", icon: "clock" },
+  { value: "02", label: "National Awards", sub: "Rice Bowl IoT & FINAS PSA", icon: "award" },
   { value: "100K", label: "Grant Pitch Impact", sub: "MDEC CIP SPARK Secured", icon: "award" },
   { value: "09", label: "Brand Systems", sub: "Venture Brands Directed", icon: "layers" },
   { value: "05", label: "Product Lines", sub: "Smart Mobility & POS Suites", icon: "shield-check" },
